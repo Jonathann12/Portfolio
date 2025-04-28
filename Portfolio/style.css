@@ -1,0 +1,211 @@
+:root {
+  --bg-color: #121212;
+  --card-color: #1f1f1f;
+  --accent-color: #0db0f0;
+  --text-color: #e0e0e0;
+  --secondary-text: #a0a0a0;
+  --button-hover: #0ff0fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container Principal */
+.container-principal {
+  width: 100%;
+  max-width: 1600px;
+  position: relative;
+}
+
+/* Menu */
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: var(--accent-color);
+}
+
+/* Card Principal */
+.card {
+  background-color: var(--card-color);
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
+  min-height: 800px;
+  margin-top: 80px;
+}
+
+/* Lado esquerdo (foto) */
+.lado-esquerdo {
+  flex: 1;
+  background-color: var(--card-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.foto-perfil {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--accent-color);
+  box-shadow: 0 0 20px var(--accent-color);
+}
+
+.Linkedola{
+width: 50px;
+height: 50px;
+
+}
+
+/* Lado direito (texto) */
+.lado-direito {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.saudacao {
+  font-size: 1.7em;
+  color: var(--secondary-text);
+  margin-bottom: 10px;
+}
+
+.lado-direito h1 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+.bio {
+  font-size: 1.8em;
+  color: var(--secondary-text);
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+/* Botões com Ícones */
+.botoes {
+  display: flex;
+  gap: 20px;
+}
+
+.icone-botao {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.icone-botao:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+  
+  .menu {
+    position: static;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .lado-esquerdo, .lado-direito {
+    padding: 20px;
+  }
+
+  .foto-perfil {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.projetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.projeto {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 15px;
+  width: 700px;
+  height: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.projeto h2 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.projeto p {
+  color: var(--secondary-text);
+  font-size: 1.7em;
+}
+
+.projeto:hover {
+  transform: scale(1.05);
+}
+
+.bio2 {
+  font-size: 2.0em;
+  color: var(--secondary-text);
+  margin-bottom: 30px;
+  max-width: 700px;
+}
